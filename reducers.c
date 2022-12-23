@@ -19,7 +19,42 @@
  * @return a pointer to the updated beginning of the list
  */
 sender_t *add_source_to_list(sender_t *list, char *source_email) {
-    return NULL;
+    // Tester pour list == NULL
+    // Loop a travers la liste et return si l'éléments existe (liste doublementchainée)(Comparer avec "recipient_address")
+    // Ajouter le nouvel élément
+        // créer nouveau sender_t element
+        // (On ajoute au début (plus rapide pour le tri de mail)
+        // recipient_address = source_email
+        // list.next = element
+        // element.next = list
+        // list.prev.next = element
+        // element.prev = list.prev
+    //return list
+    
+    /*	
+    ////////// AJOUTER EN TÊTE L'ELEMENT //////// (Non testé)
+    
+    sender_t* temp;
+	temp = (sender_t*)malloc(sizeof(sender_t));
+
+	if (list == NULL) {
+
+		temp.recipient_address = recipient_address;
+		temp.next = temp;
+        temp.prev = temp;
+	}
+	else {
+		temp.recipient_address = source_email;
+		temp.next = list;
+		temp.prev = list.prev;
+
+		temp.prev.next = temp;
+		temp.next.prev = temp;
+	}
+    return temp;
+    */
+    return NULL; // a supprimer
+
 }
 
 /*!
